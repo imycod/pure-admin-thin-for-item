@@ -9,7 +9,7 @@ import { openDialog, closeDialog } from "@/views/item/utils/dialog";
 import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({
-    content: 111,
+    content: Setting,
     title: 111
     // footerRenderer({ index }) {
     //   return h("div", null, [
