@@ -37,14 +37,21 @@
       >
       </re-col>
     </el-row> -->
-    <el-button type="primary" @click="openSetting">button</el-button>
+    <el-button type="primary" @click="openSetting('common')"
+      >common setting</el-button
+    >
     <el-button type="primary" @click="openDialog">button dialog</el-button>
+    <el-button type="primary" @click="openDraw">button draw</el-button>
+    <el-button type="primary" @click="openSetting('single')"
+      >single setting</el-button
+    >
   </div>
 </template>
 
 <script setup lang="ts">
 import { emitter } from "@/utils/mitt";
 import { openDialog, closeDialog } from "@/views/item/utils/dialog";
+import { openDraw } from "@/views/item/utils/draw";
 import { ElButton } from "element-plus";
 import { h } from "vue";
 
@@ -74,7 +81,19 @@ const dialogConfig = {
   }
 };
 
-function openSetting() {
-  emitter.emit("openPanel");
+function openSetting(type) {
+  switch (type) {
+    case "common":
+      emitter.emit("openPanel");
+      break;
+    case "single":
+      emitter.emit("openSetting", {
+        title: "single setting",
+        content: "single setting content"
+      });
+      break;
+    default:
+      break;
+  }
 }
 </script>
