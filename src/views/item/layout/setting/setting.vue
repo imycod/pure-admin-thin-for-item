@@ -152,6 +152,19 @@ defineOptions({
 </template>
 
 <style lang="scss" scoped>
-// ----------------------------------------- 整体风格
-// ----------------------------------------- 主题色
+.theme-color {
+  height: 20px;
+
+  li {
+    float: left;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:nth-child(1) {
+      border: 1px solid #ddd;
+    }
+  }
+}
 </style>

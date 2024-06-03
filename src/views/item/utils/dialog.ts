@@ -43,31 +43,11 @@ const initialConfig = {
 
 export const openDialog = (config = initialConfig) => {
   const headerRenderer = () => {
-    // let Vnode = null;
     const title = config.title;
-    // if (isFunction(title)) {
-    //   Vnode = title();
-    // } else if (isObject(title)) {
-    //   Vnode = title;
-    // } else if (isString(title)) {
-    //   Vnode = h("div", title);
-    // } else {
-    //   Vnode = h("div", "title is required");
-    // }
     return title ? serializeVnode(title) : h("div", "title is required");
   };
   const contentRenderer = ({ options, index }) => {
-    // let Vnode = null;
     const content = config.content;
-    // if (isFunction(content)) {
-    //   Vnode = content();
-    // } else if (isObject(content)) {
-    //   Vnode = content;
-    // } else if (isString(content)) {
-    //   Vnode = h("div", content);
-    // } else {
-    //   Vnode = h("div", "content is required");
-    // }
     return content ? serializeVnode(content) : h("div", "content is required");
   };
 
