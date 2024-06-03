@@ -5,8 +5,8 @@ import { isString, isFunction, isObject } from "@pureadmin/utils";
 import { serializeVnode } from "@/utils/isVue.ts";
 
 const initialConfig = {
-  title: null,
-  content: null,
+  title: "",
+  content: "",
   beforeCancel: function (done, { options, index }) {
     done();
   },
@@ -41,13 +41,13 @@ const initialConfig = {
   }
 };
 
-function getVnode(value) {
-  return value ? serializeVnode(value) : h("div", "title is required");
+function getVnode(value: any, type: string) {
+  return value ? serializeVnode(value) : () => h("div", `${type} is required`);
 }
 
-export const openDialog = (config = initialConfig) => {
-  const headerRenderer = getVnode(config.title);
-  const contentRenderer = getVnode(config.content);
+export function openDialog(config = initialConfig) {
+  const headerRenderer = getVnode(config.title, "title");
+  const contentRenderer = getVnode(config.content, "content");
 
   const beforeCancel = config.beforeCancel || initialConfig.beforeCancel;
   const beforeSure = config.beforeSure || initialConfig.beforeSure;
@@ -68,8 +68,6 @@ export const openDialog = (config = initialConfig) => {
     footerRenderer
   };
 
-  console.log("options----", options);
-
   // Object.keys(initialConfig).forEach(key => {
   //   if (!config[key]) {
   //     console.log(key);
@@ -77,6 +75,6 @@ export const openDialog = (config = initialConfig) => {
   //   }
   // });
   addDialog(options);
-};
+}
 
 export { closeDialog } from "@/components/ReDialog/index";

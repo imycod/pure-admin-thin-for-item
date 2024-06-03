@@ -37,7 +37,7 @@
       >
       </re-col>
     </el-row> -->
-    <el-button type="primary" @click="openDialog">dialog</el-button>
+    <el-button @click="openDialog">dialog</el-button>
     <el-button type="primary" @click="openSetting">setting</el-button>
   </div>
 </template>

@@ -9,8 +9,8 @@ import { openDialog, closeDialog } from "@/views/item/utils/dialog";
 import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({
-    content: Setting,
-    title: "title111"
+    content: 111,
+    title: 111
     // footerRenderer({ index }) {
     //   return h("div", null, [
     //     h(
@@ -20,7 +20,7 @@ function showDialog() {
     //           closeDialog({}, index);
     //         }
     //       },
-    //       "cancel"
+    //       "cancel111"
     //     ),
     //     h(
     //       ElButton,
@@ -30,7 +30,7 @@ function showDialog() {
     //           closeDialog({}, index);
     //         }
     //       },
-    //       "confirm"
+    //       "confirm22"
     //     )
     //   ]);
     // }
@@ -46,7 +46,7 @@ const drawConifg = {
   <div>
     UserList
     <el-button @click="showDialog">openDialog</el-button>
-    <el-button type="primary" @click="openDraw(drawConifg)">openDraw</el-button>
+    <el-button type="primary" @click="openDraw">openDraw</el-button>
   </div>
 </template>
 
