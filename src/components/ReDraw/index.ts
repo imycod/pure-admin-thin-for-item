@@ -1,3 +1,4 @@
+import { ref } from "vue";
 import reDraw from "./index.vue";
 import { withInstall } from "@pureadmin/utils";
 
@@ -5,23 +6,23 @@ const ReDraw = withInstall(reDraw);
 
 const visible = ref(false);
 
-const initialState = {
-  title: null,
-  content: null
-};
+interface initialState {
+  title: String;
+  contentRenderer: ({ options, index }) => Function;
+}
 
-const drawStore = ref({});
-
-const addDraw = (state = initialState) => {
+const options = ref<initialState>({});
+const addDraw = state => {
   visible.value = true;
-  Object.keys(initialState).forEach(key => {
-    drawStore.value[key] = state[key] || initialState[key];
-  });
-  console.log("state------", state);
+  options.value.title = state.title || null;
+  const contentRenderer = () => {
+    return null;
+  };
+  options.value.contentRenderer = state.contentRenderer || contentRenderer;
 };
 
 const closeDraw = () => {
   visible.value = false;
 };
 
-export { ReDraw, visible, drawStore, addDraw, closeDraw };
+export { ReDraw, visible, options, addDraw, closeDraw };

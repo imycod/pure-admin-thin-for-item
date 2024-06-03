@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { visible, drawStore } from "./index";
+import { visible, options } from "./index";
 
 defineOptions({
   name: "ReDraw"
@@ -7,8 +7,11 @@ defineOptions({
 </script>
 
 <template>
-  <el-drawer v-model="visible" :title="drawStore.title">
-    <span>{{ drawStore.content }}</span>
+  <el-drawer v-model="visible" :title="options.title">
+    <component
+      v-bind="options?.props"
+      :is="options.contentRenderer({ options, index })"
+    />
   </el-drawer>
 </template>
 

@@ -87,10 +87,7 @@ function openSetting(type) {
       emitter.emit("openPanel");
       break;
     case "single":
-      emitter.emit("openSetting", {
-        title: "single setting",
-        content: "single setting content"
-      });
+      emitter.emit("openSetting");
       break;
     default:
       break;
