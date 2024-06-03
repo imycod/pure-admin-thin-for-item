@@ -10,7 +10,17 @@ import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({
     content: Setting,
-    title: 111
+    title: h(
+      "h1",
+      {
+        class: "underline"
+        // style: {
+        //   color: "red"
+        // }
+      },
+      "sd"
+    ),
+    hideFooter: true
     // footerRenderer({ index }) {
     //   return h("div", null, [
     //     h(
@@ -47,6 +57,7 @@ const drawConifg = {
     UserList
     <el-button @click="showDialog">openDialog</el-button>
     <el-button type="primary" @click="openDraw">openDraw</el-button>
+    <Setting></Setting>
   </div>
 </template>
 

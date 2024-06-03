@@ -74,7 +74,8 @@ export function openDialog(config = initialConfig) {
   //     options[key] = initialConfig[key];
   //   }
   // });
-  addDialog(options);
+
+  addDialog(Object.assign({}, options, config));
 }
 
 export { closeDialog } from "@/components/ReDialog/index";
