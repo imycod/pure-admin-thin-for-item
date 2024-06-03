@@ -37,14 +37,8 @@
       >
       </re-col>
     </el-row> -->
-    <el-button type="primary" @click="openSetting('common')"
-      >common setting</el-button
-    >
-    <el-button type="primary" @click="openDialog">button dialog</el-button>
-    <el-button type="primary" @click="openDraw">button draw</el-button>
-    <el-button type="primary" @click="openSetting('single')"
-      >single setting</el-button
-    >
+    <el-button type="primary" @click="openDialog">dialog</el-button>
+    <el-button type="primary" @click="openSetting">setting</el-button>
   </div>
 </template>
 
@@ -82,15 +76,6 @@ const dialogConfig = {
 };
 
 function openSetting(type) {
-  switch (type) {
-    case "common":
-      emitter.emit("openPanel");
-      break;
-    case "single":
-      emitter.emit("openSetting");
-      break;
-    default:
-      break;
-  }
+  emitter.emit("openSetting");
 }
 </script>
