@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { openDraw } from "@/views/item/utils/draw";
+import Setting from "@/views/item/layout/setting/setting.vue";
 // @ts-nocheck
 defineOptions({
   name: "UserList"
@@ -8,7 +9,7 @@ import { openDialog, closeDialog } from "@/views/item/utils/dialog";
 import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({
-    content: h("div", null, [h("div", null, "content111")]),
+    content: Setting,
     title: "title111"
     // footerRenderer({ index }) {
     //   return h("div", null, [
@@ -35,13 +36,17 @@ function showDialog() {
     // }
   });
 }
+
+const drawConifg = {
+  title: "title111"
+};
 </script>
 
 <template>
   <div>
     UserList
     <el-button @click="showDialog">openDialog</el-button>
-    <el-button type="primary" @click="openDraw">openDraw</el-button>
+    <el-button type="primary" @click="openDraw(drawConifg)">openDraw</el-button>
   </div>
 </template>
 

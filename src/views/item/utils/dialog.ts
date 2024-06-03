@@ -41,23 +41,21 @@ const initialConfig = {
   }
 };
 
+function getVnode(value) {
+  return value ? serializeVnode(value) : h("div", "title is required");
+}
+
 export const openDialog = (config = initialConfig) => {
-  const headerRenderer = () => {
-    const title = config.title;
-    return title ? serializeVnode(title) : h("div", "title is required");
-  };
-  const contentRenderer = ({ options, index }) => {
-    const content = config.content;
-    return content ? serializeVnode(content) : h("div", "content is required");
-  };
+  const headerRenderer = getVnode(config.title);
+  const contentRenderer = getVnode(config.content);
 
-  const beforeCancel = config.beforeCancel;
-  const beforeSure = config.beforeSure;
+  const beforeCancel = config.beforeCancel || initialConfig.beforeCancel;
+  const beforeSure = config.beforeSure || initialConfig.beforeSure;
 
-  const closeCallBack = config.closeCallBack;
-  const open = config.open;
-  const close = config.close;
-  const footerRenderer = config.footerRenderer;
+  const closeCallBack = config.closeCallBack || initialConfig.closeCallBack;
+  const open = config.open || initialConfig.open;
+  const close = config.close || initialConfig.close;
+  const footerRenderer = config.footerRenderer || initialConfig.footerRenderer;
 
   const options = {
     open,
@@ -70,11 +68,14 @@ export const openDialog = (config = initialConfig) => {
     footerRenderer
   };
 
-  Object.keys(initialConfig).forEach(key => {
-    if (!config[key]) {
-      options[key] = initialConfig[key];
-    }
-  });
+  console.log("options----", options);
+
+  // Object.keys(initialConfig).forEach(key => {
+  //   if (!config[key]) {
+  //     console.log(key);
+  //     options[key] = initialConfig[key];
+  //   }
+  // });
   addDialog(options);
 };
 
