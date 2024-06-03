@@ -7,7 +7,7 @@ onMounted(() => {
   emitter.on("openSetting", () => {
     openDraw({
       title: "系统设置",
-      content: () => Setting
+      content: Setting
     });
   });
 });
@@ -17,6 +17,6 @@ onBeforeUnmount(() => {
 });
 
 defineOptions({
-  name: "Setting"
+  name: "SettingPannel"
 });
 </script>

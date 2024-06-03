@@ -14,11 +14,8 @@ interface initialState {
 const options = ref<initialState>({});
 const addDraw = state => {
   visible.value = true;
-  options.value.title = state.title || null;
-  const contentRenderer = () => {
-    return null;
-  };
-  options.value.contentRenderer = state.contentRenderer || contentRenderer;
+  options.value.title = state.title;
+  options.value.contentRenderer = state.content;
 };
 
 const closeDraw = () => {

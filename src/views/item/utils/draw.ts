@@ -3,7 +3,7 @@ import { addDraw } from "@/components/ReDraw/index.ts";
 
 export function openDraw(config) {
   const content = config.content;
-  content ? (config.content = serializeVnode(content)) : null;
+  content ? (config.content = serializeVnode(content)) : "";
   addDraw(config);
 }
 

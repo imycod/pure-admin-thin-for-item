@@ -7,13 +7,16 @@ export function isVueComponent(obj: any): obj is Component {
 
 export const serializeVnode = (value: any) => {
   if (isVNode(value)) {
-    return value;
+    return () => value;
   }
   if (isString(value)) {
     return () => h("div", value);
   }
   if (isFunction(value)) {
     const v = value();
+    if (v === undefined) {
+      return () => null;
+    }
     return serializeVnode(v);
   }
   if (isObject(value) && isVueComponent(value)) {
