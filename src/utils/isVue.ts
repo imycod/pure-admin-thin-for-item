@@ -1,4 +1,4 @@
-import { Component } from "vue";
+import { Component, isVNode } from "vue";
 import { isString, isFunction, isObject } from "@pureadmin/utils";
 
 export function isVueComponent(obj: any): obj is Component {
@@ -6,6 +6,9 @@ export function isVueComponent(obj: any): obj is Component {
 }
 
 export const serializeVnode = (value: any) => {
+  if (isVNode(value)) {
+    return value;
+  }
   if (isString(value)) {
     return () => h("div", value);
   }

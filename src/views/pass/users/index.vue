@@ -8,7 +8,7 @@ import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({
     content: h("div", null, [h("div", null, "content111")]),
-    title: "xxx1"
+    title: "title111"
     // footerRenderer({ index }) {
     //   return h("div", null, [
     //     h(
