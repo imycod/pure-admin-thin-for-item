@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import LaySetting from "@/layout/components/lay-setting/index.vue";
+import Setting from "./setting/index.vue";
 import sidebar from "./sidebar.vue";
 import { useDataThemeChange } from "@/layout/hooks/useDataThemeChange";
 import {
@@ -27,6 +28,7 @@ onBeforeMount(() => {
     </div>
   </div>
   <lay-setting></lay-setting>
+  <setting></setting>
 </template>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row :gutter="24" justify="space-around">
+    <!-- <el-row :gutter="24" justify="space-around">
       <re-col
         :md="12"
         :sm="12"
@@ -17,7 +17,6 @@
           }
         }"
       >
-        <el-button type="primary" @click="openSetting">button</el-button>
       </re-col>
 
       <re-col
@@ -36,9 +35,10 @@
           }
         }"
       >
-        <el-button type="primary" @click="openDialog">button dialog</el-button>
       </re-col>
-    </el-row>
+    </el-row> -->
+    <el-button type="primary" @click="openSetting">button</el-button>
+    <el-button type="primary" @click="openDialog">button dialog</el-button>
   </div>
 </template>
 
