@@ -15,7 +15,10 @@ const options = ref<initialState>({});
 const addDraw = state => {
   visible.value = true;
   options.value.title = state.title;
-  options.value.contentRenderer = state.content;
+  const contentRenderer = () => {
+    return null;
+  };
+  options.value.contentRenderer = state.content || contentRenderer;
 };
 
 const closeDraw = () => {

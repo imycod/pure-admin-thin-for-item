@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { openDraw } from "@/views/item/utils/draw";
 // @ts-nocheck
 defineOptions({
   name: "UserList"
@@ -40,6 +41,7 @@ function showDialog() {
   <div>
     UserList
     <el-button @click="showDialog">openDialog</el-button>
+    <el-button type="primary" @click="openDraw">openDraw</el-button>
   </div>
 </template>
 
