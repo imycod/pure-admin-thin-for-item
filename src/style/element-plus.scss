@@ -74,6 +74,10 @@
   }
 }
 
+.el-drawer {
+  --el-drawer-bg-color: var(--el-secondary-bg-color) !important;
+}
+
 .el-icon {
   &.el-tour__close,
   &.el-dialog__close,

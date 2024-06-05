@@ -27,3 +27,9 @@ export default defineComponent({
   }
 });
 </script>
+
+<style>
+#app {
+  background-color: var(--el-bg-color);
+}
+</style>

@@ -9,41 +9,32 @@ import { openDialog, closeDialog } from "@/views/item/utils/dialog";
 import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({
-    content: Setting,
-    title: h(
-      "h1",
-      {
-        class: "underline"
-        // style: {
-        //   color: "red"
-        // }
-      },
-      "sd"
-    ),
-    hideFooter: true
-    // footerRenderer({ index }) {
-    //   return h("div", null, [
-    //     h(
-    //       ElButton,
-    //       {
-    //         onClick() {
-    //           closeDialog({}, index);
-    //         }
-    //       },
-    //       "cancel111"
-    //     ),
-    //     h(
-    //       ElButton,
-    //       {
-    //         type: "primary",
-    //         onClick() {
-    //           closeDialog({}, index);
-    //         }
-    //       },
-    //       "confirm22"
-    //     )
-    //   ]);
-    // }
+    content: 111,
+    title: () => 111,
+    hideFooter: true,
+    footerRenderer({ index }) {
+      return h("div", null, [
+        h(
+          ElButton,
+          {
+            onClick() {
+              closeDialog({}, index);
+            }
+          },
+          "cancel111"
+        ),
+        h(
+          ElButton,
+          {
+            type: "primary",
+            onClick() {
+              closeDialog({}, index);
+            }
+          },
+          "confirm22"
+        )
+      ]);
+    }
   });
 }
 
@@ -54,10 +45,8 @@ const drawConifg = {
 
 <template>
   <div>
-    UserList
     <el-button @click="showDialog">openDialog</el-button>
     <el-button type="primary" @click="openDraw">openDraw</el-button>
-    <Setting></Setting>
   </div>
 </template>
 

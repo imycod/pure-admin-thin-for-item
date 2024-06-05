@@ -6,7 +6,8 @@ html.dark {
   $color-white: #fff;
 
   /* 自定义深色背景颜色 */
-  // --el-bg-color: #020409;
+  --el-bg-color: #1b1c23;
+  --el-secondary-bg-color: #21232b;
 
   /* 常用border-color 需要时可取用 */
   --pure-border-color: rgb(253 253 253 / 12%);
@@ -22,7 +23,7 @@ html.dark {
   .sidebar-logo-container,
   .horizontal-header .el-sub-menu__title,
   .horizontal-header .submenu-title-noDropdown {
-    background: var(--el-bg-color) !important;
+    background: var(--el-secondary-bg-color) !important;
   }
 
   .app-main,
