@@ -44,6 +44,8 @@
 }
 
 .pure-dialog {
+  --el-dialog-bg-color: var(--el-secondary-bg-color) !important;
+
   .el-dialog__header.show-close {
     padding-right: 16px;
   }
@@ -64,6 +66,10 @@
   }
 }
 
+.pure-drawer {
+  --el-drawer-bg-color: var(--el-secondary-bg-color) !important;
+}
+
 /* 全局覆盖element-plus的el-tour、el-dialog、el-drawer、el-message-box、el-notification组件右上角关闭图标和el-upload上传文件列表右侧关闭图标的样式，表现更鲜明 */
 .el-dialog__headerbtn,
 .el-message-box__headerbtn {
@@ -72,10 +78,6 @@
       color: var(--el-color-info) !important;
     }
   }
-}
-
-.el-drawer {
-  --el-drawer-bg-color: var(--el-secondary-bg-color) !important;
 }
 
 .el-icon {

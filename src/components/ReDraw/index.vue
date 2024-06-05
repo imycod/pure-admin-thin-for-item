@@ -7,7 +7,7 @@ defineOptions({
 </script>
 
 <template>
-  <el-drawer v-model="visible" :title="options.title">
+  <el-drawer v-model="visible" class="pure-drawer" :title="options.title">
     <component
       v-bind="options?.props"
       :is="options.contentRenderer({ options, index })"
