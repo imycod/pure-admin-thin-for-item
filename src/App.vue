@@ -1,17 +1,21 @@
 <template>
-  <el-config-provider :locale="currentLocale">
-    <router-view />
-    <ReDialog />
-    <ReDraw />
-  </el-config-provider>
+  <div>
+    <el-config-provider :locale="currentLocale">
+      <router-view />
+      <ReDialog />
+      <ReDraw />
+    </el-config-provider>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted, onUnmounted } from "vue";
 import { ElConfigProvider } from "element-plus";
 import { ReDialog } from "@/components/ReDialog";
 import { ReDraw } from "@/components/ReDraw";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
+
+// import autofit from "autofit.js";
 
 export default defineComponent({
   name: "app",
@@ -19,6 +23,17 @@ export default defineComponent({
     [ElConfigProvider.name]: ElConfigProvider,
     ReDialog,
     ReDraw
+  },
+  setup() {
+    onMounted(() => {
+      console.log("app mounted");
+      // autofit.init();
+    });
+    onUnmounted(() => {
+      console.log("app unmounted");
+      // autofit.off();
+    });
+    return {};
   },
   computed: {
     currentLocale() {
@@ -29,7 +44,13 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
+/* #app {
   background-color: var(--el-bg-color);
-}
+  width: 1920px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+} */
 </style>

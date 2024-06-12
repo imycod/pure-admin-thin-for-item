@@ -46,21 +46,20 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div class="flex">
-    <sidebar></sidebar>
-    <div class="container">
+  <div class="flex w-full">
+    <sidebar />
+    <div class="pure-container">
       <router-view />
     </div>
   </div>
-  <setting></setting>
+  <setting />
 </template>
 
 <style lang="scss" scoped>
-.container {
-  position: relative;
+.pure-container {
+  flex: 1;
   height: 100vh;
   min-height: 100%;
-  width: 100%;
   margin-left: 210px;
 }
 </style>
