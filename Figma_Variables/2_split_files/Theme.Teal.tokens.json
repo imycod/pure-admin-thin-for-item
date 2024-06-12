@@ -1,0 +1,64 @@
+{
+  "Primary": {
+    "L-1": {
+      "$type": "color",
+      "$value": "{Teal.600}"
+    },
+    "L-2": {
+      "$type": "color",
+      "$value": "{Teal.700}"
+    },
+    "L-3": {
+      "$type": "color",
+      "$value": "{Teal.800}"
+    },
+    "D-1": {
+      "$type": "color",
+      "$value": "{Teal.400}"
+    },
+    "D-2": {
+      "$type": "color",
+      "$value": "{Teal.300}"
+    },
+    "D-3": {
+      "$type": "color",
+      "$value": "{Teal.200}"
+    }
+  },
+  "Secondary": {
+    "L-1": {
+      "$type": "color",
+      "$value": "{Teal.50}"
+    },
+    "L-2": {
+      "$type": "color",
+      "$value": "{Teal.100}"
+    },
+    "L-3": {
+      "$type": "color",
+      "$value": "{Teal.200}"
+    },
+    "D-1": {
+      "$type": "color",
+      "$value": "{Teal.900}"
+    },
+    "D-2": {
+      "$type": "color",
+      "$value": "{Teal.800}"
+    },
+    "D-3": {
+      "$type": "color",
+      "$value": "{Teal.700}"
+    }
+  },
+  "Tertiary": {
+    "L-1": {
+      "$type": "color",
+      "$value": "{Teal.900}"
+    },
+    "D-1": {
+      "$type": "color",
+      "$value": "{Teal.50}"
+    }
+  }
+}

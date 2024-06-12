@@ -1,0 +1,332 @@
+{
+  "Surface": {
+    "Neutral": {
+      "Primary": {
+        "Rest": {
+          "$type": "color",
+          "$value": "{White.100%}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Gray.50}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Gray.100}"
+        },
+        "Disabled": {
+          "$type": "color",
+          "$value": "{White.100%}"
+        }
+      },
+      "Secondary": {
+        "Rest": {
+          "$type": "color",
+          "$value": "{Gray.50}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Gray.100}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Gray.200}"
+        },
+        "Disabled": {
+          "$type": "color",
+          "$value": "{Gray.50}"
+        }
+      },
+      "Tertiary": {
+        "Rest": {
+          "$type": "color",
+          "$value": "{Gray.200}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Gray.300}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Gray.400}"
+        },
+        "Disabled": {
+          "$type": "color",
+          "$value": "{Gray.50}"
+        }
+      }
+    },
+    "Filled": {
+      "Rest": {
+        "$type": "color",
+        "$value": "{Primary.L-1}"
+      },
+      "Hover": {
+        "$type": "color",
+        "$value": "{Primary.L-2}"
+      },
+      "Pressed": {
+        "$type": "color",
+        "$value": "{Primary.L-3}"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "{Gray.50}"
+      },
+      "Error": {
+        "$type": "color",
+        "$value": "{Red.500}"
+      },
+      "Warning": {
+        "$type": "color",
+        "$value": "{Yellow.700}"
+      },
+      "Success": {
+        "$type": "color",
+        "$value": "{Green.500}"
+      }
+    },
+    "Tonal": {
+      "Rest": {
+        "$type": "color",
+        "$value": "{Secondary.L-1}"
+      },
+      "Hover": {
+        "$type": "color",
+        "$value": "{Secondary.L-2}"
+      },
+      "Pressed": {
+        "$type": "color",
+        "$value": "{Secondary.L-3}"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "{Gray.50}"
+      },
+      "Error": {
+        "$type": "color",
+        "$value": "{Red.50}"
+      },
+      "Warning": {
+        "$type": "color",
+        "$value": "{Yellow.50}"
+      },
+      "Success": {
+        "$type": "color",
+        "$value": "{Green.50}"
+      }
+    }
+  },
+  "Background": {
+    "Primary": {
+      "$type": "color",
+      "$value": "{White.100%}"
+    },
+    "Secondary": {
+      "$type": "color",
+      "$value": "{Gray.50}"
+    },
+    "Tertiary": {
+      "$type": "color",
+      "$value": "{Gray.100}"
+    }
+  },
+  "Text": {
+    "Content": {
+      "Darkest": {
+        "$type": "color",
+        "$value": "{Black.100%}"
+      },
+      "Dark": {
+        "$type": "color",
+        "$value": "{Gray.900}"
+      },
+      "Medium": {
+        "$type": "color",
+        "$value": "{Gray.700}"
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": "{Gray.500}"
+      },
+      "Soft": {
+        "$type": "color",
+        "$value": "{Gray.300}"
+      }
+    },
+    "CTA": {
+      "Achromatic": {
+        "$type": "color",
+        "$value": "{White.100%}"
+      },
+      "Tonal": {
+        "$type": "color",
+        "$value": "{Tertiary.L-1}"
+      },
+      "Rest": {
+        "$type": "color",
+        "$value": "{Primary.L-1}"
+      },
+      "Hover": {
+        "$type": "color",
+        "$value": "{Primary.L-2}"
+      },
+      "Pressed": {
+        "$type": "color",
+        "$value": "{Primary.L-3}"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "{Gray.200}"
+      },
+      "Success": {
+        "$type": "color",
+        "$value": "{Green.500}"
+      },
+      "Warning": {
+        "$type": "color",
+        "$value": "{Yellow.700}"
+      },
+      "Error": {
+        "$type": "color",
+        "$value": "{Red.500}"
+      }
+    }
+  },
+  "Icon": {
+    "Content": {
+      "Darkest": {
+        "$type": "color",
+        "$value": "{Black.100%}"
+      },
+      "Dark": {
+        "$type": "color",
+        "$value": "{Gray.900}"
+      },
+      "Medium": {
+        "$type": "color",
+        "$value": "{Gray.700}"
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": "{Gray.500}"
+      },
+      "Soft": {
+        "$type": "color",
+        "$value": "{Gray.300}"
+      }
+    },
+    "CTA": {
+      "Achromatic": {
+        "$type": "color",
+        "$value": "{White.100%}"
+      },
+      "Rest": {
+        "$type": "color",
+        "$value": "{Primary.L-1}"
+      },
+      "Hover": {
+        "$type": "color",
+        "$value": "{Primary.L-2}"
+      },
+      "Pressed": {
+        "$type": "color",
+        "$value": "{Primary.L-3}"
+      },
+      "Tonal": {
+        "$type": "color",
+        "$value": "{Tertiary.L-1}"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "{Gray.200}"
+      },
+      "Error": {
+        "$type": "color",
+        "$value": "{Red.500}"
+      },
+      "Warning": {
+        "$type": "color",
+        "$value": "{Yellow.700}"
+      },
+      "Success": {
+        "$type": "color",
+        "$value": "{Green.500}"
+      }
+    }
+  },
+  "Stroke": {
+    "Border": {
+      "Neutral": {
+        "Rest": {
+          "$type": "color",
+          "$value": "{Gray.200}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Gray.300}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Gray.400}"
+        },
+        "Disabled": {
+          "$type": "color",
+          "$value": "{Gray.50}"
+        },
+        "Focused": {
+          "$type": "color",
+          "$value": "{Gray.100}"
+        }
+      },
+      "CTA": {
+        "Rest": {
+          "$type": "color",
+          "$value": "{Primary.L-1}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Primary.L-2}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Primary.L-3}"
+        },
+        "Focused": {
+          "$type": "color",
+          "$value": "{Secondary.L-2}"
+        },
+        "Disabled": {
+          "$type": "color",
+          "$value": "{Gray.200}"
+        },
+        "Error": {
+          "$type": "color",
+          "$value": "{Red.500}"
+        },
+        "Warning": {
+          "$type": "color",
+          "$value": "{Yellow.700}"
+        },
+        "Success": {
+          "$type": "color",
+          "$value": "{Green.500}"
+        }
+      }
+    },
+    "Divider": {
+      "Subtle": {
+        "$type": "color",
+        "$value": "{Black.10%}"
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": "{Black.30%}"
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": "{Black.50%}"
+      }
+    }
+  }
+}

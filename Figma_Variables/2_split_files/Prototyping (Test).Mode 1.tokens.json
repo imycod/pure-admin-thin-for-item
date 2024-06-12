@@ -1,0 +1,6 @@
+{
+  "Amount available": {
+    "$type": "number",
+    "$value": 0
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "Display": {
+    "Width": {
+      "$type": "number",
+      "$value": 834
+    },
+    "Height": {
+      "$type": "number",
+      "$value": 1194
+    }
+  },
+  "Default Column": {
+    "MinWidth": {
+      "$type": "number",
+      "$value": 300
+    },
+    "MaxWidth": {
+      "$type": "number",
+      "$value": 400
+    }
+  },
+  "Small Column": {
+    "MinWidth": {
+      "$type": "number",
+      "$value": 200
+    },
+    "MaxWidth": {
+      "$type": "number",
+      "$value": 400
+    }
+  },
+  "Large Column": {
+    "MinWidth": {
+      "$type": "number",
+      "$value": 300
+    },
+    "MaxWidth": {
+      "$type": "number",
+      "$value": 600
+    }
+  },
+  "Spacing": {
+    "3xs": {
+      "$type": "number",
+      "$value": "{1}"
+    },
+    "2xs": {
+      "$type": "number",
+      "$value": "{2}"
+    },
+    "xs": {
+      "$type": "number",
+      "$value": "{3}"
+    },
+    "sm": {
+      "$type": "number",
+      "$value": "{4}"
+    },
+    "md": {
+      "$type": "number",
+      "$value": "{5}"
+    },
+    "lg": {
+      "$type": "number",
+      "$value": "{6}"
+    },
+    "xl": {
+      "$type": "number",
+      "$value": "{8}"
+    },
+    "2xl": {
+      "$type": "number",
+      "$value": "{10}"
+    },
+    "3xl": {
+      "$type": "number",
+      "$value": "{12}"
+    }
+  },
+  "Radius": {
+    "xs": {
+      "$type": "number",
+      "$value": "{1}"
+    },
+    "sm": {
+      "$type": "number",
+      "$value": "{2}"
+    },
+    "md": {
+      "$type": "number",
+      "$value": "{4}"
+    },
+    "lg": {
+      "$type": "number",
+      "$value": "{5}"
+    },
+    "xl": {
+      "$type": "number",
+      "$value": "{6}"
+    },
+    "Full": {
+      "$type": "number",
+      "$value": 9999
+    }
+  }
+}

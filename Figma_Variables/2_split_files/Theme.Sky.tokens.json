@@ -1,0 +1,64 @@
+{
+  "Primary": {
+    "L-1": {
+      "$type": "color",
+      "$value": "{Sky.700}"
+    },
+    "L-2": {
+      "$type": "color",
+      "$value": "{Sky.800}"
+    },
+    "L-3": {
+      "$type": "color",
+      "$value": "{Sky.900}"
+    },
+    "D-1": {
+      "$type": "color",
+      "$value": "{Sky.400}"
+    },
+    "D-2": {
+      "$type": "color",
+      "$value": "{Sky.300}"
+    },
+    "D-3": {
+      "$type": "color",
+      "$value": "{Sky.200}"
+    }
+  },
+  "Secondary": {
+    "L-1": {
+      "$type": "color",
+      "$value": "{Sky.50}"
+    },
+    "L-2": {
+      "$type": "color",
+      "$value": "{Sky.100}"
+    },
+    "L-3": {
+      "$type": "color",
+      "$value": "{Sky.200}"
+    },
+    "D-1": {
+      "$type": "color",
+      "$value": "{Sky.900}"
+    },
+    "D-2": {
+      "$type": "color",
+      "$value": "{Sky.800}"
+    },
+    "D-3": {
+      "$type": "color",
+      "$value": "{Sky.700}"
+    }
+  },
+  "Tertiary": {
+    "L-1": {
+      "$type": "color",
+      "$value": "{Sky.900}"
+    },
+    "D-1": {
+      "$type": "color",
+      "$value": "{Sky.50}"
+    }
+  }
+}

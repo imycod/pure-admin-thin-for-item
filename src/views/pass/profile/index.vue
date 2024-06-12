@@ -39,6 +39,7 @@
     </el-row> -->
     <el-button @click="openDialog">dialog</el-button>
     <el-button type="primary" @click="openSetting">setting</el-button>
+    <el-button type="primary">测试</el-button>
   </div>
 </template>
 
