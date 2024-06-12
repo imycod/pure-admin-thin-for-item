@@ -10,6 +10,7 @@ import pluginTypeScript from "@typescript-eslint/eslint-plugin";
 export default defineFlatConfig([
   {
     ...js.configs.recommended,
+    // 忽略特定文件和文件夹。
     ignores: [
       "**/.*",
       "dist/*",
@@ -19,6 +20,7 @@ export default defineFlatConfig([
       "src/**/iconfont/**"
     ],
     languageOptions: {
+      // 定义一些全局变量为只读，防止在代码中无意修改它们
       globals: {
         // index.d.ts
         RefType: "readonly",
@@ -52,11 +54,13 @@ export default defineFlatConfig([
       }
     },
     plugins: {
+      // 启用 Prettier 插件及其规则。
       prettier: pluginPrettier
     },
     rules: {
       ...configPrettier.rules,
       ...pluginPrettier.configs.recommended.rules,
+      // 例如关闭调试器检查和配置未使用变量的检查。
       "no-debugger": "off",
       "no-unused-vars": [
         "error",
@@ -73,6 +77,7 @@ export default defineFlatConfig([
       ]
     }
   },
+  // TypeScript 文件配置
   {
     files: ["**/*.?([cm])ts", "**/*.?([cm])tsx"],
     languageOptions: {
@@ -84,6 +89,7 @@ export default defineFlatConfig([
     plugins: {
       "@typescript-eslint": pluginTypeScript
     },
+    // 禁用类型注释、显式 any 类型等。
     rules: {
       ...pluginTypeScript.configs.strict.rules,
       "@typescript-eslint/ban-types": "off",
@@ -112,24 +118,30 @@ export default defineFlatConfig([
       ]
     }
   },
+  // 声明文件配置
   {
     files: ["**/*.d.ts"],
+    // 禁用一些规则，如对 ESLint 注释的限制和未使用变量的检查。
     rules: {
       "eslint-comments/no-unlimited-disable": "off",
       "import/no-duplicates": "off",
       "unused-imports/no-unused-vars": "off"
     }
   },
+  // JavaScript 文件配置
   {
     files: ["**/*.?([cm])js"],
+    // 允许使用 require 导入语句。
     rules: {
       "@typescript-eslint/no-require-imports": "off",
       "@typescript-eslint/no-var-requires": "off"
     }
   },
+  // Vue 文件配置
   {
     files: ["**/*.vue"],
     languageOptions: {
+      // 定义一些 Vue 特有的全局变量为只读。
       globals: {
         $: "readonly",
         $$: "readonly",
@@ -139,6 +151,7 @@ export default defineFlatConfig([
         $shallowRef: "readonly",
         $toRef: "readonly"
       },
+      // 使用 vue-eslint-parser 解析器和 eslint-plugin-vue 插件。
       parser: parserVue,
       parserOptions: {
         ecmaFeatures: {
@@ -153,6 +166,7 @@ export default defineFlatConfig([
       vue: pluginVue
     },
     processor: pluginVue.processors[".vue"],
+    // 启用 Vue3 推荐的规则配置，并对一些规则进行调整，如禁用 v-html 检查、默认 prop 和多词组件名的检查等。
     rules: {
       ...pluginVue.configs.base.rules,
       ...pluginVue.configs["vue3-essential"].rules,
