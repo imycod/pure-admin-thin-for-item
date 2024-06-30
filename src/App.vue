@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <el-config-provider :locale="currentLocale">
-      <router-view />
-      <ReDialog />
-      <ReDraw />
-    </el-config-provider>
-  </div>
+  <el-config-provider :locale="currentLocale">
+    <router-view />
+    <ReDialog />
+    <ReDraw />
+  </el-config-provider>
 </template>
 
 <script lang="ts">
@@ -16,7 +14,6 @@ import { ReDraw } from "@/components/ReDraw";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 
 // import autofit from "autofit.js";
-
 export default defineComponent({
   name: "app",
   components: {
@@ -27,12 +24,11 @@ export default defineComponent({
   setup() {
     onMounted(() => {
       console.log("app mounted");
-      // autofit.init();
     });
     onUnmounted(() => {
       console.log("app unmounted");
-      // autofit.off();
     });
+
     return {};
   },
   computed: {
@@ -43,7 +39,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss" scoped>
 /* #app {
   background-color: var(--el-bg-color);
   width: 1920px;
