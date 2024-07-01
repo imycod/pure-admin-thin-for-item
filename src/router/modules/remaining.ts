@@ -26,5 +26,14 @@ export default [
         component: () => import("@/layout/redirect.vue")
       }
     ]
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    // redirect: '/',
+    name: "404",
+    component: () => import("@/views/error/404.vue"),
+    meta: {
+      title: "404"
+    }
   }
 ] satisfies Array<RouteConfigsTable>;
