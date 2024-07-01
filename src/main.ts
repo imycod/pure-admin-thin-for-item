@@ -1,6 +1,6 @@
 import App from "./App.vue";
 import router from "./router";
-import passRouter from "./router/pass-routes";
+import passRouter from "@itemspace/pass/routes";
 import { setupStore } from "@/store";
 import { getPlatformConfig } from "./config";
 import { MotionPlugin } from "@vueuse/motion";

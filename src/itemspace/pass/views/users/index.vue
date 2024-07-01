@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { openDraw } from "@/views/item/utils/draw";
-import Setting from "@/views/item/layout/setting/setting.vue";
+import { openDraw } from "@itemspace/utils/draw.ts";
+import Setting from "@itemspace/pass/layout/setting/setting.vue";
 // @ts-nocheck
 defineOptions({
   name: "UserList"
 });
-import { openDialog, closeDialog } from "@/views/item/utils/dialog";
+import { openDialog, closeDialog } from "@itemspace/utils/dialog.ts";
 import { ElButton } from "element-plus";
 function showDialog() {
   openDialog({

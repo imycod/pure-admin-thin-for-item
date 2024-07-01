@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { emitter } from "@/utils/mitt";
-import { openDraw } from "@/views/item/utils/draw";
+import { openDraw } from "@itemspace/utils/draw";
 import Setting from "./setting.vue";
 
 onMounted(() => {

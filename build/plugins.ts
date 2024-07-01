@@ -24,7 +24,7 @@ export function getPluginsList(
     vueJsx(),
     AutoImport({
       imports: ["vue", "vue-router", "pinia"],
-      dts: "../auto-imports.d.ts"
+      dts: "./types/auto-imports.d.ts"
     }),
     viteBuildInfo(),
     /**
