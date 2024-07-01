@@ -23,7 +23,7 @@ export function useDataThemeChange() {
     /* 道奇蓝 */
     { color: "#1b2a47", themeColor: "default" },
     /* 深紫罗兰色 */
-    { color: "#722ed1", themeColor: "saucePurple" },
+    { color: "#9B51F5", themeColor: "saucePurple" },
     /* 深粉色 */
     { color: "#eb2f96", themeColor: "pink" },
     /* 猩红色 */
