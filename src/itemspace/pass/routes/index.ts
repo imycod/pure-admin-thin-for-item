@@ -6,9 +6,9 @@ import {
   createWebHistory
 } from "vue-router";
 import NProgress from "@/utils/progress";
-import { getHistoryMode } from "../utils";
+import { getHistoryMode } from "@/router/utils";
 
-const Layout = () => import("@/views/item/layout/index.vue");
+const Layout = () => import(`@itemspace/pass/layout/index.vue`);
 
 export const routes = [
   {
@@ -32,7 +32,7 @@ export const routes = [
           icon: "ep:home-filled",
           showLink: true
         },
-        component: () => import("@/views/pass/profile/index.vue")
+        component: () => import(`@itemspace/pass/views/profile/index.vue`)
       }
     ]
   },
@@ -57,7 +57,7 @@ export const routes = [
           icon: "ep:home-filled",
           showLink: true
         },
-        component: () => import("@/views/pass/users/index.vue")
+        component: () => import(`@itemspace/pass/views/users/index.vue`)
       }
     ]
   }

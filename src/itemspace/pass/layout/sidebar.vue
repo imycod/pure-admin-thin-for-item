@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { routes } from "@/router/pass-routes/index";
+import { routes } from "@itemspace/pass/routes/index";
 
 defineOptions({
   name: "Sidebar"
