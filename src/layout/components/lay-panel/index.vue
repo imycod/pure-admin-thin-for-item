@@ -47,7 +47,7 @@ onBeforeUnmount(() => {
 <template>
   <div :class="{ show }">
     <div class="right-panel-background" />
-    <div ref="target" class="right-panel bg-bg_color">
+    <div ref="target" class="right-panel bg-bg_color pure-drawer">
       <div
         class="project-configuration border-b-[1px] border-solid border-[var(--pure-border-color)]"
       >

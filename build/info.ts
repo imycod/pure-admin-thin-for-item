@@ -22,8 +22,7 @@ function getWelcomeMessage() {
   //   borderColor: "cyan",
   //   borderStyle: "round"
   // });
-  const welcomeMessage = gradientString("cyan", "magenta").multiline(env);
-  return welcomeMessage;
+  return gradientString("cyan", "magenta").multiline(env);
 }
 
 const boxenOptions: BoxenOptions = {
@@ -44,8 +43,7 @@ export function viteBuildInfo(): Plugin {
       outDir = resolvedConfig.build?.outDir ?? "dist";
     },
     buildStart() {
-      console.log("🚀 Vite Build Info");
-      const welcomeMessage = getWelcomeMessage();
+      const welcomeMessage = "🚀 Vite Build Info \n" + getWelcomeMessage();
       console.log(boxen(welcomeMessage, boxenOptions));
       if (config.command === "build") {
         startTime = dayjs(new Date());
