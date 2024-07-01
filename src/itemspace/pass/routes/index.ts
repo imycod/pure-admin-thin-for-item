@@ -1,16 +1,24 @@
-import {
-  type Router,
-  createRouter,
-  type RouteRecordRaw,
-  type RouteComponent,
-  createWebHistory
-} from "vue-router";
+// @ts-nocheck
+import { type Router, createRouter } from "vue-router";
 import NProgress from "@/utils/progress";
 import { getHistoryMode } from "@/router/utils";
 
 const Layout = () => import(`@itemspace/pass/layout/index.vue`);
 
-export const routes = [
+const remaining = [
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("@/views/login/index.vue"),
+    meta: {
+      title: "登录",
+      showLink: false,
+      rank: 101
+    }
+  }
+];
+
+const home = [
   {
     path: "/",
     name: "Home",
@@ -62,6 +70,8 @@ export const routes = [
     ]
   }
 ];
+
+export const routes = [...home, ...remaining];
 
 export const router: Router = createRouter({
   history: getHistoryMode(import.meta.env.VITE_ROUTER_HISTORY),
