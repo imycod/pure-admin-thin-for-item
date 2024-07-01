@@ -61,5 +61,6 @@ onBeforeMount(() => {
   height: 100vh;
   min-height: 100%;
   margin-left: 210px;
+  background-color: var(--el-bg-color);
 }
 </style>
